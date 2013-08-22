@@ -14,6 +14,12 @@ elgg_register_event_handler('init', 'system', 'roles_ui_init', 999);
 
 function roles_ui_init() {
 
+	if (!is_callable('roles_init')) {
+		register_error(elgg_echo('roles:ui:plugin_dependancy_error'));
+		disable_plugin('roles_ui');
+		forward('admin/plugins');
+	}
+
 	$path = elgg_get_plugins_path() . 'roles_ui/';
 
 	$libraries = array(

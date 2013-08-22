@@ -10,7 +10,9 @@ $english = array(
 	'admin:roles:edit' => 'Edit Role',
 	'admin:roles:permissions' => 'Permissions',
 	'admin:roles:users' => 'Role: %s',
-	
+
+	'roles:ui:plugin_dependancy_error' => 'Roles plugin is not active. Roles UI will be deactivated',
+
 	'roles:ui:name' => 'Role name',
 	'roles:ui:name:help' => 'Must be a unique role identifier, e.g. moderator',
 	'roles:ui:title' => 'Title',
