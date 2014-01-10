@@ -21,3 +21,9 @@ hook and event handlers
 * Due to the complexity of the Elgg menu API, not all menu items will be
 available in the autocomplete. Feel free to add custom values
 * Extend rules for menus can not be configured using this plugin
+
+
+## Screenshots ##
+
+![alt text](https://raw.github.com/hypeJunction/roles_ui/master/screenshots/roles_ui.png "Admin Interface")
+![alt text](https://raw.github.com/hypeJunction/roles_ui/master/screenshots/user_hover.png "User Hover Menu Popup")

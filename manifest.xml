@@ -31,4 +31,13 @@
 		<priority>after</priority>
 	</requires>
 
+	<screenshot>
+		<description>Admin Interface</description>
+		<path>screenshots/roles_ui.png</path>
+	</screenshot>
+	<screenshot>
+		<description>User Hover Menu Popup</description>
+		<path>screenshots/user_hover.png</path>
+	</screenshot>
+
 </plugin_manifest>
