@@ -1,11 +1,18 @@
-<?php if (FALSE) : ?>
+<?php
+
+namespace Elgg\Roles\UI;
+
+if (FALSE) :
+	?>
 	<script type='text/javascript'>
 <?php endif; ?>
 
-	elgg.provide('roles');
 	elgg.provide('roles.ui');
+	elgg.provide('roles.ui.admin');
 
-	roles.ui.init = function() {
+	roles.ui.plugin_id = '<?php echo PLUGIN_ID ?>';
+
+	roles.ui.admin.init = function() {
 
 		$('.roles-ui-add-permission-button')
 				.live('click', function(e) {
@@ -13,7 +20,7 @@
 			var tmpl = $(this).attr('rel');
 			var $template = $('[data-tmpl="' + tmpl + '"]').clone();
 			$template.removeAttr('data-tmpl').removeClass('hidden').appendTo('.roles-ui-permissions');
-			roles.ui.initAutocomplete();
+			roles.ui.admin.initAutocomplete();
 
 		})
 
@@ -23,7 +30,7 @@
 			var $form = $(this).closest('.roles-ui-form');
 			$('.roles-ui-form-rule-options-parts', $form).hide().find('input,select').val('');
 			$('.roles-ui-form-rule-options-parts[rel="' + $(this).val() + '"]', $form).show();
-			roles.ui.initAutocomplete();
+			roles.ui.admin.initAutocomplete();
 		})
 
 		$('.roles-ui-rule-remove')
@@ -39,7 +46,7 @@
 		})
 	}
 
-	roles.ui.initAutocomplete = function() {
+	roles.ui.admin.initAutocomplete = function() {
 		$('.roles-ui-autocomplete-views')
 				.autocomplete({
 			source: elgg.views_config
@@ -84,8 +91,8 @@
 
 	}
 
-	elgg.register_hook_handler('init', 'system', roles.ui.init);
-	elgg.register_hook_handler('init', 'system', roles.ui.initAutocomplete);
+	elgg.register_hook_handler('init', 'system', roles.ui.admin.init);
+	elgg.register_hook_handler('init', 'system', roles.ui.admin.initAutocomplete);
 
 <?php if (FALSE) : ?></script><?php
 endif;

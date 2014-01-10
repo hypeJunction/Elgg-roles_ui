@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $name = elgg_extract('name', $vars, false);
 if (!elgg_action_exists($name)) {
 	$name .= elgg_view('admin/roles/warnings/actions');

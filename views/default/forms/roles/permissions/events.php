@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $name = elgg_extract('name', $vars, false);
 $details = elgg_extract('details', $vars);
 $actionable = elgg_extract('actionable', $vars, true);
@@ -17,7 +19,7 @@ switch ($rule) {
 		} else if (!is_callable($handler)) {
 			$handler .= elgg_view('admin/roles/warnings/callback');
 		}
-		$opts = '<div class="option">' . elgg_echo('roles:ui:permissions:handler') . '<strong>' . $handler . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:handler') . '<strong>' . $handler . '</strong></div>';
 		break;
 
 	case 'extend' :
@@ -25,8 +27,8 @@ switch ($rule) {
 		if (!is_callable($handler)) {
 			$handler .= elgg_view('admin/roles/warnings/callback');
 		}
-		$opts = '<div class="option">' . elgg_echo('roles:ui:permissions:handler') . '<strong>' . $handler . '</strong></div>';
-		$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:priority') . '<strong>' . $event['priority'] . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:handler') . '<strong>' . $handler . '</strong></div>';
+		$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:priority') . '<strong>' . $event['priority'] . '</strong></div>';
 		break;
 
 	case 'replace' :
@@ -38,8 +40,8 @@ switch ($rule) {
 		if (!is_callable($new_handler)) {
 			$new_handler .= elgg_view('admin/roles/warnings/callback');
 		}
-		$opts = '<div class="option">' . elgg_echo('roles:ui:permissions:old_handler') . '<strong>' . $old_handler . '</strong></div>';
-		$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:new_handler') . '<strong>' . $new_handler . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:old_handler') . '<strong>' . $old_handler . '</strong></div>';
+		$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:new_handler') . '<strong>' . $new_handler . '</strong></div>';
 		break;
 }
 

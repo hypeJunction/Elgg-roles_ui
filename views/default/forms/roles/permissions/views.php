@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $name = elgg_extract('name', $vars, false);
 if (!elgg_view_exists($name)) {
 	$name .= elgg_view('admin/roles/warnings/views');
@@ -21,13 +23,13 @@ switch ($rule) {
 		if (!elgg_view_exists($view)) {
 			$view .= elgg_view('admin/roles/warnings/views');
 		}
-		$opts = '<div class="option">' . elgg_echo('roles:ui:permissions:view_extension') . '<strong>' . $view . '</strong></div>';
-		$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:priority') . '<strong>' . $extension['priority'] . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:view_extension') . '<strong>' . $view . '</strong></div>';
+		$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:priority') . '<strong>' . $extension['priority'] . '</strong></div>';
 		break;
 
 	case 'replace' :
 		$replacement = elgg_extract('view_replacement', $details);
-		$opts = '<div class="option">' . elgg_echo('roles:ui:permissions:location') . '<strong>' . $replacement['location'] . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:location') . '<strong>' . $replacement['location'] . '</strong></div>';
 		break;
 }
 

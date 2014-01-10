@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $pname = elgg_extract('name', $vars, false);
 $details = elgg_extract('details', $vars);
 $prule = elgg_extract('rule', $details);
@@ -30,7 +32,7 @@ $forward = elgg_view('input/text', array(
 	'value' => $forward_url,
 		));
 
-$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
 
 $opts .= '</div>';
 
@@ -42,7 +44,7 @@ $forward = elgg_view('input/text', array(
 	'value' => $forward_url,
 		));
 
-$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
 
 $opts .= '</div>';
 

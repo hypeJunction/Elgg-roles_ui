@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $pname = elgg_extract('name', $vars, false);
 $details = elgg_extract('details', $vars);
 $prule = elgg_extract('rule', $details);

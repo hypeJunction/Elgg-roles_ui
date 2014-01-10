@@ -1,10 +1,13 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $role = elgg_extract('entity', $vars);
 
-elgg_extend_view('js/initialize_elgg', 'js/roles/config');
-elgg_load_js('roles.ui.js');
-elgg_load_css('roles.ui.css');
+elgg_extend_view('js/initialize_elgg', 'js/roles/ui/config');
+
+elgg_load_js('roles.ui.admin');
+elgg_load_css('roles.ui.admin');
 
 $permission_types = array('actions', 'events', 'hooks', 'menus', 'views', 'pages');
 
@@ -47,7 +50,7 @@ echo '<div class="roles-ui-buttonbank clearfix">';
 foreach ($permission_types as $ptype) {
 	echo elgg_view('output/url', array(
 		'class' => 'elgg-button elgg-button-action roles-ui-add-permission-button',
-		'text' => elgg_echo("roles:ui:add:$ptype"),
+		'text' => elgg_echo(PLUGIN_ID . ":add:$ptype"),
 		'rel' => $ptype
 	));
 }

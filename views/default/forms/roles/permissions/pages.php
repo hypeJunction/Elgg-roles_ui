@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $name = elgg_extract('name', $vars, false);
 $details = elgg_extract('details', $vars);
 $actionable = elgg_extract('actionable', $vars, true);
@@ -11,11 +13,11 @@ $forward = elgg_extract('forward', $details);
 switch ($rule) {
 
 	case 'deny' :
-		$opts = '<div class="option">' . elgg_echo('roles:ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
 		break;
 
 	case 'redirect' :
-		$opts = '<div class="option">' . elgg_echo('roles:ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
 		break;
 }
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $pname = elgg_extract('name', $vars, false);
 $details = elgg_extract('details', $vars);
 $prule = elgg_extract('rule', $details);
@@ -31,7 +33,7 @@ $handler = elgg_view('input/text', array(
 	'value' => $event['handler'],
 		));
 
-$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:handler') . '<strong>' . $handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:handler') . '<strong>' . $handler . '</strong></div>';
 
 $opts .= '</div>';
 
@@ -48,8 +50,8 @@ $priority = elgg_view('input/text', array(
 	'value' => $event['priority']
 		));
 
-$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:handler') . '<strong>' . $handler . '</strong></div>';
-$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:priority') . '<strong>' . $priority . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:handler') . '<strong>' . $handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:priority') . '<strong>' . $priority . '</strong></div>';
 
 $opts .= '</div>';
 
@@ -67,8 +69,8 @@ $new_handler = elgg_view('input/text', array(
 	'value' => $event['new_handler'],
 		));
 
-$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:old_handler') . '<strong>' . $old_handler . '</strong></div>';
-$opts .= '<div class="option">' . elgg_echo('roles:ui:permissions:new_handler') . '<strong>' . $new_handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:old_handler') . '<strong>' . $old_handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:new_handler') . '<strong>' . $new_handler . '</strong></div>';
 
 $opts .= '</div>';
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace Elgg\Roles\UI;
+
 $guid = get_input('guid');
 $role = get_entity($guid);
 
