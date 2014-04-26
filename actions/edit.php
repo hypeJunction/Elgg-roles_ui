@@ -30,7 +30,7 @@ if (elgg_instanceof($current_role, 'object', 'role')) {
 	$current_role->extends = $ordered_extends;
 	if ($current_role->save()) {
 		system_message(elgg_echo(PLUGIN_ID . ':edit:success', array($name)));
-		$forward_url = "admin/roles/permissions?$current_role->name";
+		$forward_url = "admin/roles/permissions?role=$current_role->name";
 	}
 } else {
 
@@ -52,7 +52,7 @@ if (elgg_instanceof($current_role, 'object', 'role')) {
 		$new_role->extends = $ordered_extends;
 		$new_role->permissions = serialize(array());
 		system_message(elgg_echo(PLUGIN_ID . ':edit:success', array($name)));
-		$forward_url = "admin/roles/permissions?$new_role->name";
+		$forward_url = "admin/roles/permissions?role=$new_role->name";
 	}
 }
 
