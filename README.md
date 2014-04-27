@@ -15,6 +15,8 @@ permissions - you can copy paste those into another roles config hook
 
 ## Notes
 
+* Once enabled, configuration arrays for roles (defined in other plugins) will
+be completely ignored.
 * The plugin uses autocomplete inputs, which accept custom values. This allows
 to define custom rules for items that could not be identified from configured
 hook and event handlers
