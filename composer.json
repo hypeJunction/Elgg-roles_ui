@@ -1,0 +1,27 @@
+{
+	"name": "hypejunction/roles-ui",
+	"type": "elgg-plugin",
+	"repository": "hypeJunction/roles_ui",
+	"description": "User interface for ArckInteractive's Roles",
+	"homepage": "http://hypejunction.com",
+	"minimum-stability": "stable",
+	"keywords": [
+		"elgg", "plugin", "roles", "ui"
+	],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Ismayil Khayredinov",
+			"email": "ismayil@hypejunction.com"
+		}
+	],
+	"extra": {
+		"installer-name": "roles_ui"
+	},
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": ">=1.0.8",
+		"arckinteractive/roles": ">=1.0.5"
+	}
+}
+

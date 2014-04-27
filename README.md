@@ -25,6 +25,21 @@ available in the autocomplete. Feel free to add custom values
 * Extend rules for menus can not be configured using this plugin
 
 
+## Installing with Composer
+
+roles_ui can be included in your Elgg project by require from the project's
+root composer.json.
+
+Support for composer in Elgg is an experimental feature pioneered by [@Srokap](https://github.com/Srokap/ "Paweł Sroka").
+
+Provisional config to include roles_ui into your project:
+```json
+{
+	"require": {
+		"hypejunction/roles-ui" : "@stable"
+	}
+}
+```
 ## Screenshots ##
 
 ![alt text](https://raw.github.com/hypeJunction/roles_ui/master/screenshots/roles_ui.png "Admin Interface")
