@@ -1,6 +1,6 @@
 <?php
 
-namespace Elgg\Roles\UI;
+//namespace Elgg\Roles\UI;
 
 // VIEWS FOR AUTOCOMPLETE
 $views = elgg_view_tree('', '');
