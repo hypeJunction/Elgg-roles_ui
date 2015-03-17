@@ -10,7 +10,7 @@ $permissions = array();
 $views = get_input('views', false, false);
 
 if ($views) {
-	for ($i = 0; $i < count($views); $i++) {
+	for ($i = 0; $i < count($views['name']); $i++) {
 		$name = $views['name'][$i];
 		if (!$name) {
 			continue;
@@ -38,7 +38,7 @@ if ($views) {
 $actions = get_input('actions', false, false);
 
 if ($actions) {
-	for ($i = 0; $i < count($actions); $i++) {
+	for ($i = 0; $i < count($actions['name']); $i++) {
 		$name = $actions['name'][$i];
 		if (!$name) {
 			continue;
@@ -55,7 +55,7 @@ if ($actions) {
 $hooks = get_input('hooks', false, false);
 
 if ($hooks) {
-	for ($i = 0; $i < count($hooks); $i++) {
+	for ($i = 0; $i < count($hooks['name']); $i++) {
 		$name = $hooks['name'][$i];
 		if (!$name) {
 			continue;
@@ -89,7 +89,7 @@ if ($hooks) {
 $events = get_input('events', false, false);
 
 if ($events) {
-	for ($i = 0; $i < count($events); $i++) {
+	for ($i = 0; $i < count($events['name']); $i++) {
 		$name = $events['name'][$i];
 		if (!$name) {
 			continue;
@@ -122,7 +122,7 @@ if ($events) {
 $pages = get_input('pages', false, false);
 
 if ($pages) {
-	for ($i = 0; $i < count($pages); $i++) {
+	for ($i = 0; $i < count($pages['name']); $i++) {
 		$name = $pages['name'][$i];
 		if (!$name) {
 			continue;
@@ -150,7 +150,7 @@ if ($pages) {
 $menus = get_input('menus', false, false);
 
 if ($menus) {
-	for ($i = 0; $i < count($menus); $i++) {
+	for ($i = 0; $i < count($menus['name']); $i++) {
 		$name = $menus['name'][$i];
 		if (!$name) {
 			continue;
