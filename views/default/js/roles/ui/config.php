@@ -104,7 +104,7 @@ foreach ($entities as $entity) {
 		$menu = elgg_trigger_plugin_hook('register', "menu:$menu_name", $fake_params, $items);
 
 		foreach ($menu as $item) {
-			if ($item instanceof ElggMenuItem) {
+			if ($item instanceof \ElggMenuItem) {
 				$menus_config[$menu_name][] = $item->getName();
 			}
 		}
