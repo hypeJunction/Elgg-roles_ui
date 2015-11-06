@@ -4,7 +4,7 @@ namespace Elgg\Roles\UI;
 
 $role = roles_get_role_by_name(get_input('role', DEFAULT_ROLE));
 
-echo '<h3>' . elgg_echo('roles_ui:users:in_role', array($role->title)) . '</h3>';
+echo '<h3>' . elgg_echo('roles_ui:users:in_role', array($role->getDisplayName())) . '</h3>';
 
 $list = elgg_list_entities_from_relationship(array(
 	'types' => 'user',
@@ -15,7 +15,7 @@ $list = elgg_list_entities_from_relationship(array(
 		));
 
 if (!$list) {
-	echo '<p>' . elgg_echo('roles_ui:users:none', array($role->title)) . '</p>';
+	echo '<p>' . elgg_echo('roles_ui:users:none', array($role->getDisplayName())) . '</p>';
 } else {
 	echo $list;
 }

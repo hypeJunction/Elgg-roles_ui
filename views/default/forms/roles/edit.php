@@ -20,7 +20,7 @@ echo '<label>' . elgg_echo('roles_ui:title') . '</label>';
 echo '<span class="elgg-text-help">' . elgg_echo('roles_ui:title:help') . '</span>';
 echo elgg_view('input/text', array(
 	'name' => 'title',
-	'value' => $role->title,
+	'value' => $role->getDisplayName(),
 ));
 echo '</div>';
 
@@ -46,7 +46,7 @@ foreach ($roles as $r) {
 	echo '<tr>';
 
 	echo '<td>';
-	echo '<label>' . elgg_echo($r->title) . '</label>';
+	echo '<label>' . $r->getDisplayName() . '</label>';
 	echo '</td>';
 
 	$order = array_search($r->name, $role->extends);

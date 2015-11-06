@@ -45,7 +45,7 @@ if (roles_set_role($role, $user)) {
 			'role' => array(
 				'guid' => $role->guid,
 				'name' => $role->name,
-				'title' => $role->title
+				'title' => $role->getDisplayName(),
 			)
 		);
 

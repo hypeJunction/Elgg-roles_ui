@@ -40,7 +40,7 @@ function menu_setup() {
 			elgg_register_menu_item('page', array(
 				'name' => "roles:users:{$role->name}",
 				'href' => "admin/roles/users?role=$role->name",
-				'text' => elgg_echo('admin:roles:users:role', array(elgg_echo($role->title))),
+				'text' => elgg_echo('admin:roles:users:role', array($role->getDisplayName())),
 				'context' => 'admin',
 				'parent_name' => 'users',
 				'section' => 'administer'

@@ -14,7 +14,7 @@ if (!elgg_instanceof($role, 'object', 'role')) {
 	return;
 }
 
-echo elgg_view_title($role->title);
+echo elgg_view_title($role->getDisplayName());
 
 echo '<br />';
 

@@ -5,7 +5,7 @@ namespace Elgg\Roles\UI;
 $entity = elgg_extract('entity', $vars);
 
 $title = elgg_view('output/url', array(
-	'text' => $entity->title,
+	'text' => $entity->getDisplayName(),
 	'href' => $entity->getURL()
 		));
 
