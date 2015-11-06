@@ -49,7 +49,7 @@ foreach ($roles as $r) {
 	echo '<label>' . $r->getDisplayName() . '</label>';
 	echo '</td>';
 
-	$order = array_search($r->name, $role->extends);
+	$order = array_search($r->name, $role->getExtends());
 
 	echo '<td>';
 	echo elgg_view('input/text', array(

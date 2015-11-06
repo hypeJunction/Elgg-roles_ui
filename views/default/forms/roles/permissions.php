@@ -11,7 +11,7 @@ elgg_load_css('roles.ui.admin');
 
 $permission_types = array('actions', 'events', 'hooks', 'menus', 'views', 'pages');
 
-$perms = (isset($role->permissions)) ? unserialize($role->permissions) : array();
+$perms = $role->getPermissions();
 
 echo '<ul class="roles-ui-permissions">';
 foreach ($permission_types as $ptype) {

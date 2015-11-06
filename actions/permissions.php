@@ -172,7 +172,7 @@ if ($menus) {
 	}
 }
 
-$role->permissions = serialize($permissions);
+$role->setPermissions($permissions);
 
 // Reset hash so that the cache is reindexed
 elgg_set_plugin_setting('roles_hash', '', 'roles');

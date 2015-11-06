@@ -18,7 +18,7 @@ echo elgg_view_title($role->getDisplayName());
 
 echo '<br />';
 
-$extends = $role->extends;
+$extends = $role->getExtends();
 if ($extends && !is_array($extends)) {
 	$extends = array($extends);
 }
@@ -49,5 +49,5 @@ echo '<br />';
 
 echo '<h3>' . elgg_echo('roles_ui:config') . '</h3>';
 echo '<pre>';
-var_export(unserialize($role->permissions));
+var_export($role->getPermissions());
 echo '</pre>';

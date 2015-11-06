@@ -27,7 +27,7 @@ if (!$current_role && roles_get_role_by_name($name)) {
 if (elgg_instanceof($current_role, 'object', 'role')) {
 	// Update existing role obejct
 	$current_role->title = $title;
-	$current_role->extends = $ordered_extends;
+	$current_role->setExtends($ordered_extends);
 	if ($current_role->save()) {
 		system_message(elgg_echo('roles_ui:edit:success', array($name)));
 		$forward_url = $current_role->getURL();
@@ -49,8 +49,8 @@ if (elgg_instanceof($current_role, 'object', 'role')) {
 	} else {
 		// Add metadata
 		$new_role->name = $name;
-		$new_role->extends = $ordered_extends;
-		$new_role->permissions = serialize(array());
+		$new_role->setExtends($ordered_extends);
+		$new_role->setPermissions(array());
 		system_message(elgg_echo('roles_ui:edit:success', array($name)));
 		$forward_url = $new_role->getURL();
 	}
