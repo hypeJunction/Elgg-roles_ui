@@ -18,10 +18,10 @@
 	"extra": {
 		"installer-name": "roles_ui"
 	},
-	"require": {
-		"php": ">=5.3.3",
-		"composer/installers": ">=1.0.8",
-		"arckinteractive/roles": ">=1.0.5"
+	"require-dev": {
+		"php": ">=5.4",
+		"composer/installers": "~1.0",
+		"arckinteractive/roles": "~2.0"
 	}
 }
 
