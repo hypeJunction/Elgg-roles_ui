@@ -33,7 +33,7 @@ $handler = elgg_view('input/text', array(
 	'value' => $hook['handler'],
 		));
 
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:handler') . '<strong>' . $handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:handler') . '<strong>' . $handler . '</strong></div>';
 
 $opts .= '</div>';
 
@@ -50,8 +50,8 @@ $priority = elgg_view('input/text', array(
 	'value' => $hook['priority']
 		));
 
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:handler') . '<strong>' . $handler . '</strong></div>';
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:priority') . '<strong>' . $priority . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:handler') . '<strong>' . $handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:priority') . '<strong>' . $priority . '</strong></div>';
 
 $opts .= '</div>';
 
@@ -69,8 +69,8 @@ $new_handler = elgg_view('input/text', array(
 	'value' => $hook['new_handler'],
 		));
 
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:old_handler') . '<strong>' . $old_handler . '</strong></div>';
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:new_handler') . '<strong>' . $new_handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:old_handler') . '<strong>' . $old_handler . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:new_handler') . '<strong>' . $new_handler . '</strong></div>';
 
 $opts .= '</div>';
 

@@ -9,7 +9,7 @@ $title = elgg_view('output/url', array(
 	'href' => $entity->getURL()
 		));
 
-$subtitle = elgg_echo(PLUGIN_ID . ':name'). ': <strong>' . $entity->name . '</strong>';
+$subtitle = elgg_echo('roles_ui:name'). ': <strong>' . $entity->name . '</strong>';
 
 $extends = $role->extends;
 if ($extends && !is_array($extends)) {
@@ -18,7 +18,7 @@ if ($extends && !is_array($extends)) {
 
 if (count($extends)) {
 	$content .= '<div class="roles-ui-extends">';
-	$content .= '<h3>' . elgg_echo(PLUGIN_ID . ':extends') . '</h3>';
+	$content .= '<h3>' . elgg_echo('roles_ui:extends') . '</h3>';
 	$content .= '<ul class="elgg-list">';
 	foreach ($extends as $rname) {
 		$content .= '<li>';

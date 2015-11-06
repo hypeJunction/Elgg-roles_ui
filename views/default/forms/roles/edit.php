@@ -6,8 +6,8 @@ $role = elgg_extract('entity', $vars);
 $roles = roles_get_all_roles();
 
 echo '<div>';
-echo '<label>' . elgg_echo(PLUGIN_ID . ':name') . '</label>';
-echo '<span class="elgg-text-help">' . elgg_echo(PLUGIN_ID . ':name:help') . '</span>';
+echo '<label>' . elgg_echo('roles_ui:name') . '</label>';
+echo '<span class="elgg-text-help">' . elgg_echo('roles_ui:name:help') . '</span>';
 echo elgg_view('input/text', array(
 	'name' => 'name',
 	'value' => $role->name,
@@ -16,8 +16,8 @@ echo elgg_view('input/text', array(
 echo '</div>';
 
 echo '<div>';
-echo '<label>' . elgg_echo(PLUGIN_ID . ':title') . '</label>';
-echo '<span class="elgg-text-help">' . elgg_echo(PLUGIN_ID . ':title:help') . '</span>';
+echo '<label>' . elgg_echo('roles_ui:title') . '</label>';
+echo '<span class="elgg-text-help">' . elgg_echo('roles_ui:title:help') . '</span>';
 echo elgg_view('input/text', array(
 	'name' => 'title',
 	'value' => $role->title,
@@ -25,15 +25,15 @@ echo elgg_view('input/text', array(
 echo '</div>';
 
 echo '<div>';
-echo '<label>' . elgg_echo(PLUGIN_ID . ':extends') . '</label>';
-echo '<span class="elgg-text-help">' . elgg_echo(PLUGIN_ID . ':extends:help') . '</span>';
+echo '<label>' . elgg_echo('roles_ui:extends') . '</label>';
+echo '<span class="elgg-text-help">' . elgg_echo('roles_ui:extends:help') . '</span>';
 
 echo '<table class="elgg-table-alt">';
 
 echo '<thead>';
 echo '<tr>';
-echo '<th>' . elgg_echo(PLUGIN_ID . ':extend_name') . '</th>';
-echo '<th>' . elgg_echo(PLUGIN_ID . ':extend_order') . '</th>';
+echo '<th>' . elgg_echo('roles_ui:extend_name') . '</th>';
+echo '<th>' . elgg_echo('roles_ui:extend_order') . '</th>';
 echo '</tr>';
 echo '</thead>';
 

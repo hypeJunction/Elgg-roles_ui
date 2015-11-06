@@ -13,11 +13,11 @@ $forward = elgg_extract('forward', $details);
 switch ($rule) {
 
 	case 'deny' :
-		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo('roles_ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
 		break;
 
 	case 'redirect' :
-		$opts = '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
+		$opts = '<div class="option">' . elgg_echo('roles_ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
 		break;
 }
 

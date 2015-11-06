@@ -32,7 +32,7 @@ $forward = elgg_view('input/text', array(
 	'value' => $forward_url,
 		));
 
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
 
 $opts .= '</div>';
 
@@ -44,7 +44,7 @@ $forward = elgg_view('input/text', array(
 	'value' => $forward_url,
 		));
 
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:forward') . '<strong>' . $forward . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:forward') . '<strong>' . $forward . '</strong></div>';
 
 $opts .= '</div>';
 

@@ -10,8 +10,6 @@ if (FALSE) :
 	elgg.provide('roles.ui');
 	elgg.provide('roles.ui.set');
 
-	roles.ui.plugin_id = '<?php echo PLUGIN_ID ?>';
-
 	roles.ui.set.init = function() {
 
 		$('.elgg-menu-item-roles-set > a')
@@ -33,7 +31,7 @@ if (FALSE) :
 						success: function(data) {
 							if (data && data.output) {
 								$('.elgg-menu-item-roles-set > a[data-guid="' + data.output.user.guid + '"]')
-										.text(elgg.echo(roles.ui.plugin_id + ':set:role', [data.output.role.title]))
+										.text(elgg.echo('roles_ui:set:role', [data.output.role.title]))
 							}
 						},
 						complete: function() {

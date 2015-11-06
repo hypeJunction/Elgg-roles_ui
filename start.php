@@ -13,8 +13,6 @@
 
 namespace Elgg\Roles\UI;
 
-const PLUGIN_ID = 'roles_ui';
-
 require_once __DIR__ . "/lib/functions.php";
 require_once __DIR__ . "/lib/hooks.php";
 require_once __DIR__ . "/lib/events.php";
@@ -28,13 +26,6 @@ function init() {
 
 	if (!elgg_is_admin_logged_in()) {
 		return;
-	}
-
-	// Make sure roles plugin is active
-	if (!is_callable('roles_init')) {
-		register_error(elgg_echo(PLUGIN_ID . ':plugin_dependancy_error'));
-		disable_plugin(PLUGIN_ID);
-		forward('admin/plugins');
 	}
 
 	elgg_unregister_event_handler('ready', 'system', 'roles_check_update');

@@ -10,8 +10,6 @@ if (FALSE) :
 	elgg.provide('roles.ui');
 	elgg.provide('roles.ui.admin');
 
-	roles.ui.plugin_id = '<?php echo PLUGIN_ID ?>';
-
 	roles.ui.admin.init = function() {
 
 		$('.roles-ui-add-permission-button')

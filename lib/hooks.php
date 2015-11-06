@@ -44,7 +44,7 @@ function user_hover_menu_setup($hook, $type, $menu, $params) {
 
 	$menu[] = \ElggMenuItem::factory(array(
 				'name' => 'roles:set',
-				'text' => elgg_echo(PLUGIN_ID . ':set:role', array($role->title)),
+				'text' => elgg_echo('roles_ui:set:role', array($role->title)),
 				'href' => 'ajax/view/roles/ajax/set?guid=' . $user->guid,
 				'data-guid' => $user->guid,
 				'section' => 'admin',

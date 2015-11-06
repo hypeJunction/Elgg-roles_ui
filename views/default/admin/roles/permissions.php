@@ -10,7 +10,7 @@ if (!elgg_instanceof($role, 'object', 'role')) {
 }
 
 if (!elgg_instanceof($role, 'object', 'role')) {
-	echo elgg_autop(elgg_echo(PLUGIN_ID . ':norole', array($name)));
+	echo elgg_autop(elgg_echo('roles_ui:norole', array($name)));
 	return;
 }
 
@@ -25,7 +25,7 @@ if ($extends && !is_array($extends)) {
 
 if (count($extends)) {
 	echo '<div class="roles-ui-extends">';
-	echo '<h3>' . elgg_echo(PLUGIN_ID . ':extends') . '</h3>';
+	echo '<h3>' . elgg_echo('roles_ui:extends') . '</h3>';
 	echo '<ul class="elgg-list">';
 	foreach ($extends as $rname) {
 		echo '<li>';
@@ -41,13 +41,13 @@ if (count($extends)) {
 
 echo '<br />';
 
-echo '<h3>' . elgg_echo(PLUGIN_ID . ':permissions') . '</h3>';
+echo '<h3>' . elgg_echo('roles_ui:permissions') . '</h3>';
 echo elgg_view_form('roles/permissions', array(), array('entity' => $role));
 
 
 echo '<br />';
 
-echo '<h3>' . elgg_echo(PLUGIN_ID . ':config') . '</h3>';
+echo '<h3>' . elgg_echo('roles_ui:config') . '</h3>';
 echo '<pre>';
 var_export(unserialize($role->permissions));
 echo '</pre>';

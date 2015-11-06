@@ -50,7 +50,7 @@ echo '<div class="roles-ui-buttonbank clearfix">';
 foreach ($permission_types as $ptype) {
 	echo elgg_view('output/url', array(
 		'class' => 'elgg-button elgg-button-action roles-ui-add-permission-button',
-		'text' => elgg_echo(PLUGIN_ID . ":add:$ptype"),
+		'text' => elgg_echo("roles_ui:add:$ptype"),
 		'rel' => $ptype
 	));
 }

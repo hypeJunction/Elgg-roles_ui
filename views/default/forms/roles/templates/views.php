@@ -38,8 +38,8 @@ $priority = elgg_view('input/text', array(
 	'value' => $extension['priority']
 		));
 
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:view_extension') . '<strong>' . $view . '</strong></div>';
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:priority') . '<strong>' . $priority . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:view_extension') . '<strong>' . $view . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:priority') . '<strong>' . $priority . '</strong></div>';
 
 $opts .= '</div>';
 
@@ -52,7 +52,7 @@ $location = elgg_view('input/text', array(
 	'name' => 'views[opts][location][]',
 	'value' => $extension['priority']
 		));
-$opts .= '<div class="option">' . elgg_echo(PLUGIN_ID . ':permissions:location') . '<strong>' . $location . '</strong></div>';
+$opts .= '<div class="option">' . elgg_echo('roles_ui:permissions:location') . '<strong>' . $location . '</strong></div>';
 
 $opts .= '</div>';
 
