@@ -48,6 +48,8 @@ function user_hover_menu_setup($hook, $type, $menu, $params) {
 				'href' => 'ajax/view/roles/ajax/set?guid=' . $user->guid,
 				'data-guid' => $user->guid,
 				'section' => 'admin',
+				'link_class' => 'elgg-lightbox',
+				'data-colorbox-opts' => json_encode(array('width' => 200)),
 	));
 
 	return $menu;

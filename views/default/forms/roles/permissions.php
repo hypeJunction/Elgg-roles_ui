@@ -3,10 +3,9 @@
 namespace Elgg\Roles\UI;
 
 $role = elgg_extract('entity', $vars);
+/* $var $role \ElggRole */
 
-elgg_extend_view('js/initialize_elgg', 'js/roles/ui/config');
-
-elgg_load_js('roles.ui.admin');
+elgg_require_js('roles/ui/admin');
 elgg_load_css('roles.ui.admin');
 
 $permission_types = array('actions', 'events', 'hooks', 'menus', 'views', 'pages');

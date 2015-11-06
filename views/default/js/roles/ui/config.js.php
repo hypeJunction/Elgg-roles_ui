@@ -120,12 +120,18 @@ foreach ($menus_config as $menu_name => $items) {
 }
 sort($menus_config_merged);
 elgg_set_config('context', $contextbackup);
-?>
 
-elgg.views_config = <?php echo json_encode($views_config) ?>;
-elgg.actions_config = <?php echo json_encode($actions_config) ?>;
-elgg.hooks_config = <?php echo json_encode($hooks_config) ?>;
-elgg.hook_handlers_config = <?php echo json_encode($hook_handlers_config) ?>;
-elgg.events_config = <?php echo json_encode($events_config) ?>;
-elgg.event_handlers_config = <?php echo json_encode($event_handlers_config) ?>;
-elgg.menus_config = <?php echo json_encode($menus_config_merged) ?>;
+$conf = array(
+	'views' => $view_config,
+	'actions' => $actions_config,
+	'hooks' => $hooks_config,
+	'hook_handlers' => $hook_handlers_config,
+	'events' => $events_config,
+	'event_handlers' => $event_handlers_config,
+	'menus_config' => $menus_config_merged,
+);
+?>
+//<script>
+define(function() {
+	return <?php echo json_encode($conf) ?>;
+});
