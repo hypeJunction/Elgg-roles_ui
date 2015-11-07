@@ -36,11 +36,9 @@ function init() {
 	elgg_register_action('roles/set', __DIR__ . '/actions/set.php', 'admin');
 
 	// Register JS and CSS
-	elgg_register_simplecache_view('css/roles/ui/admin');
-	elgg_register_css('roles.ui.admin', elgg_get_simplecache_url('css', 'roles/ui/admin'));
-
-	elgg_register_simplecache_view('css/roles/ui/set');
-	elgg_register_css('roles.ui.set', elgg_get_simplecache_url('css', 'roles/ui/set'));
+	elgg_register_simplecache_view('js/roles/ui/config.js');
+	elgg_extend_view('css/elgg', 'roles/ui/set.css');
+	elgg_extend_view('css/admin', 'roles/ui/admin.css');
 
 	// Override roles config once roles specified by other plugins have been created
 	//elgg_register_plugin_hook_handler('roles:config', 'role', __NAMESPACE__ . '\\get_roles_config');
@@ -55,14 +53,8 @@ function init() {
 	elgg_register_plugin_hook_handler('register', 'menu:user_hover', __NAMESPACE__ . '\\user_hover_menu_setup');
 
 	// Register an ajax view to pull up a roles form
-	elgg_extend_view('navigation/menu/user_hover', 'roles/ui/user_hover');
 	elgg_register_ajax_view('roles/ajax/set');
 
-	if (version_compare(elgg_get_version(true), '2.0', '<')) {
-		elgg_register_simplecache_view('js' , 'roles/ui/config.js');
-	} else {
-		elgg_register_simplecache_view('js/roles/ui/config.js');
-	}
 }
 
 /**

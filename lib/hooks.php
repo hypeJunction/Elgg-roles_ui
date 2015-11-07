@@ -49,7 +49,7 @@ function user_hover_menu_setup($hook, $type, $menu, $params) {
 				'data-guid' => $user->guid,
 				'section' => 'admin',
 				'link_class' => 'elgg-lightbox',
-				'data-colorbox-opts' => json_encode(array('width' => 200)),
+				'data-colorbox-opts' => json_encode(array('width' => '600px')),
 	));
 
 	return $menu;

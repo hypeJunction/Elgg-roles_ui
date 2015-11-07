@@ -1,5 +1,4 @@
 <?php
-
 $entity = elgg_extract('entity', $vars);
 
 if (!elgg_instanceof($entity, 'user')) {
@@ -30,3 +29,7 @@ echo '</div>';
 elgg_pop_context();
 
 elgg_set_page_owner_guid($current_page_owner->guid);
+?>
+<script>
+	require(['roles/ui/set']);
+</script>
