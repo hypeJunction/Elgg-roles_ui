@@ -7,23 +7,22 @@ define(function (require) {
 		require('jquery-ui');
 	}
 	
-	$('.roles-ui-add-permission-button').on('click', function (e) {
+	$(document).on('click', '.roles-ui-add-permission-button', function (e) {
 		e.preventDefault();
 		var tmpl = $(this).attr('rel');
 		var $template = $('[data-tmpl="' + tmpl + '"]').clone();
 		$template.removeAttr('data-tmpl').removeClass('hidden').appendTo('.roles-ui-permissions');
 		initAutocomplete();
-
 	});
 
-	$('.roles-ui-form-rule-select').on('change', function (e) {
+	$(document).on('change', '.roles-ui-form-rule-select', function (e) {
 		var $form = $(this).closest('.roles-ui-form');
 		$('.roles-ui-form-rule-options-parts', $form).hide().find('input,select').val('');
 		$('.roles-ui-form-rule-options-parts[rel="' + $(this).val() + '"]', $form).show();
 		initAutocomplete();
 	});
 
-	$('.roles-ui-rule-remove').on('click', function (e) {
+	$(document).on('click', '.roles-ui-rule-remove', function (e) {
 		e.preventDefault();
 		if (confirm(elgg.echo('question:areyousure'))) {
 			$(this).closest('.roles-ui-permission').remove();
