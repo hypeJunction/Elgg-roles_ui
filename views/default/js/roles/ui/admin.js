@@ -3,9 +3,9 @@ define(function (require) {
 	var elgg = require('elgg');
 	var $ = require('jquery');
 	var config = require('roles/ui/config');
-	if (require.defined('jquery-ui')) {
-		require('jquery-ui');
-	}
+//	if (require.defined('jquery-ui')) {
+//		require('jquery-ui');
+//	}
 	
 	$(document).on('click', '.roles-ui-add-permission-button', function (e) {
 		e.preventDefault();
