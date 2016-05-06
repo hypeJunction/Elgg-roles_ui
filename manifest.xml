@@ -3,7 +3,7 @@
 
 	<name>Roles UI</name>
 	<id>roles_ui</id>
-	<version>1.11</version>
+	<version type="dist">1.1.0</version>
 
 	<description>Admin user interface for creating and managing roles</description>
 	<category>roles</category>
