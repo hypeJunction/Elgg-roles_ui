@@ -1,7 +1,6 @@
 {
 	"name": "hypejunction/roles-ui",
 	"type": "elgg-plugin",
-	"repository": "hypeJunction/roles_ui",
 	"description": "User interface for ArckInteractive's Roles",
 	"homepage": "http://hypejunction.com",
 	"minimum-stability": "stable",
@@ -15,10 +14,7 @@
 			"email": "ismayil@hypejunction.com"
 		}
 	],
-	"extra": {
-		"installer-name": "roles_ui"
-	},
-	"require-dev": {
+	"require": {
 		"php": ">=5.4",
 		"composer/installers": "~1.0",
 		"arckinteractive/roles": "~2.0"
