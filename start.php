@@ -24,10 +24,12 @@ elgg_register_event_handler('init', 'system', __NAMESPACE__ . '\\init', 999);
  */
 function init() {
 
+	elgg_extend_view('forms/useradd', 'roles/useradd');
+
 	if (!elgg_is_admin_logged_in()) {
 		return;
 	}
-
+	
 	elgg_unregister_event_handler('ready', 'system', 'roles_check_update');
 
 	// Register actions

@@ -60,6 +60,10 @@ $english = array(
 	'roles_ui:set:error:equivalent_role' => 'Role you are trying to assign is the current user role',
 	'roles_ui:set:error:admin_gatekeeper' => 'Only administrators are allowed to change user roles',
 	'roles_ui:set:error:unknown' => 'An unknown has occurred while trying to set the role',
+
+	'roles:no_selecatable_roles' => 'There are no configured roles',
+	'user:set:roles' => 'Select roles to assign',
+
 );
 
 add_translation("en", $english);

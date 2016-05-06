@@ -8,7 +8,11 @@ if (!elgg_instanceof($entity, 'user')) {
 $current_page_owner = elgg_get_page_owner_entity();
 elgg_set_page_owner_guid($entity->guid);
 
-$body = elgg_view('roles/settings/account/role');
+
+$body = elgg_view('input/roles', [
+	'entity' => $entity,
+]);
+
 $body .= elgg_view('input/hidden', array(
 	'name' => 'guid',
 	'value' => $entity->guid,

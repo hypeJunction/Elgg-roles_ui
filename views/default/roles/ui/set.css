@@ -2,3 +2,10 @@
 	max-width: 600px;
 	padding: 10px;
 }
+.roles-ui-roles-checkboxes .elgg-icon-drag-arrow {
+	cursor: move;
+	margin-right: 5px;
+}
+.roles-ui-roles-checkboxes-placeholder {
+	border: 1px dashed #efefef;
+}
