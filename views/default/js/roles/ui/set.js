@@ -3,7 +3,6 @@ define(function (require) {
 	var elgg = require('elgg');
 	var $ = require('jquery');
 	var spinner = require('elgg/spinner');
-	var lightbox = require('elgg/lightbox');
 
 	$(document).on('submit', '.roles-ui-set-lightbox form', function (e) {
 		var $form = $(this);
@@ -21,7 +20,9 @@ define(function (require) {
 			},
 			complete: function () {
 				spinner.stop();
-				lightbox.close();
+				if (typeof $.fancybox !== 'undefined') {
+					$.fancybox.close();
+				}
 			}
 		});
 		return false;

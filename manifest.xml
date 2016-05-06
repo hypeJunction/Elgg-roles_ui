@@ -32,9 +32,4 @@
 		<priority>after</priority>
 	</requires>
 
-	<requires>
-		<type>plugin</type>
-		<name>elgg_lightbox</name>
-	</requires>
-
 </plugin_manifest>
