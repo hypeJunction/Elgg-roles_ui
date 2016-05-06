@@ -38,7 +38,7 @@ foreach ($all_roles as $role) {
 ?>
 
 <div class="elgg-field">
-	<label class="elgg-field-label"><?= elgg_echo('user:set:roles') ?></label>
+	<label class="elgg-field-label"><?php echo elgg_echo('user:set:roles') ?></label>
 	<?php
 	echo elgg_view('input/checkboxes', [
 		'name' => 'roles',
@@ -47,6 +47,7 @@ foreach ($all_roles as $role) {
 		'class' => 'roles-ui-roles-checkboxes',
 	]);
 	?>
+	<div class="elgg-text-help"><?php echo elgg_echo('user:set:roles:help') ?></div>
 </div>
 <script>
 	require(['jquery'], function ($) {

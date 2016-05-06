@@ -62,7 +62,10 @@ $english = array(
 	'roles_ui:set:error:unknown' => 'An unknown has occurred while trying to set the role',
 
 	'roles:no_selecatable_roles' => 'There are no configured roles',
-	'user:set:roles' => 'Select roles to assign',
+	'user:set:roles' => 'Select one or more roles to assign to this user',
+	'user:set:roles:help' => 'You can order roles by priority to ensure that conflicting '
+	. 'role permissions are resolved correctly. Roles with higher priority (on top of the list) '
+	. 'will take precedence over roles with lower priority (bottom of the list)',
 
 );
 
