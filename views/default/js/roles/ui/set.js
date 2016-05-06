@@ -20,8 +20,8 @@ define(function (require) {
 			},
 			complete: function () {
 				spinner.stop();
-				if (typeof $.fancybox !== 'undefined') {
-					$.fancybox.close();
+				if (typeof $.fn.colorbox !== 'undefined') {
+					$.colorbox.close();
 				}
 			}
 		});
