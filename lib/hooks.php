@@ -42,6 +42,9 @@ function user_hover_menu_setup($hook, $type, $menu, $params) {
 
 	$role = roles_get_role($user);
 
+	elgg_load_css('lightbox');
+	elgg_load_js('lightbox');
+	
 	$menu[] = \ElggMenuItem::factory(array(
 				'name' => 'roles:set',
 				'text' => elgg_echo('roles_ui:set:role', array($role->getDisplayName())),
