@@ -22,7 +22,7 @@ if (!elgg_instanceof($user, 'user')) {
 }
 
 // reset roles to default
-roles()->unsetRole($user);
+roles_unset_role($user);
 
 if (!empty($roles)) {
 	foreach ($roles as $role_name) {
@@ -31,7 +31,7 @@ if (!empty($roles)) {
 			continue;
 		}
 		sleep(1); // roles are prioritized by relationship time, so make sure times are different
-		roles()->addRole($user, $role);
+		roles_add_role($user, $role);
 	}
 }
 
