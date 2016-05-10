@@ -67,6 +67,8 @@ $english = array(
 	. 'role permissions are resolved correctly. Roles with higher priority (on top of the list) '
 	. 'will take precedence over roles with lower priority (bottom of the list)',
 
+	'roles_ui:delete:success' => 'Role has been successfully deleted',
+	'roles_ui:delete:error' => 'Unable to delete role',
 );
 
 add_translation("en", $english);
