@@ -11,7 +11,7 @@ $title = elgg_view('output/url', array(
 
 $subtitle = elgg_echo('roles_ui:name'). ': <strong>' . $entity->name . '</strong>';
 
-$extends = $role->getExtends();
+$extends = $entity->getExtends();
 if ($extends && !is_array($extends)) {
 	$extends = array($extends);
 }
