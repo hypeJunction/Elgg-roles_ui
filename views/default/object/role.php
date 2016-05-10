@@ -37,4 +37,9 @@ echo elgg_view('object/elements/summary', array(
 	'title' => $title,
 	'subtitle' => $subtitle,
 	'content' => $content,
+	'metadata' => elgg_view_menu('entity', array(
+		'entity' => $entity,
+		'sort_by' => 'priority',
+		'class' => 'elgg-menu-hz',
+	)),
 ));

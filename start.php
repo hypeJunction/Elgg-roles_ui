@@ -32,6 +32,7 @@ function init() {
 
 	// Register actions
 	elgg_register_action('roles/edit', __DIR__ . '/actions/edit.php', 'admin');
+	elgg_register_action('roles/delete', __DIR__ . '/actions/delete.php', 'admin');
 	elgg_register_action('roles/permissions', __DIR__ . '/actions/permissions.php', 'admin');
 	elgg_register_action('roles/set', __DIR__ . '/actions/set.php', 'admin');
 
@@ -51,6 +52,9 @@ function init() {
 
 	// Allow admins to set the role from user hover menu
 	elgg_register_plugin_hook_handler('register', 'menu:user_hover', __NAMESPACE__ . '\\user_hover_menu_setup');
+
+	// Setup role menu
+	elgg_register_plugin_hook_handler('register', 'menu:entity', __NAMESPACE__ . '\\entity_menu_setup', 1000);
 
 	// Register an ajax view to pull up a roles form
 	elgg_register_ajax_view('roles/ajax/set');

@@ -60,6 +60,9 @@ $english = array(
 	'roles_ui:set:error:equivalent_role' => 'Role you are trying to assign is the current user role',
 	'roles_ui:set:error:admin_gatekeeper' => 'Only administrators are allowed to change user roles',
 	'roles_ui:set:error:unknown' => 'An unknown has occurred while trying to set the role',
+
+	'roles_ui:delete:success' => 'Role has been successfully deleted',
+	'roles_ui:delete:error' => 'Unable to delete role',
 );
 
 add_translation("en", $english);

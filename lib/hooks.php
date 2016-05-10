@@ -44,7 +44,7 @@ function user_hover_menu_setup($hook, $type, $menu, $params) {
 
 	elgg_load_css('lightbox');
 	elgg_load_js('lightbox');
-	
+
 	$menu[] = \ElggMenuItem::factory(array(
 				'name' => 'roles:set',
 				'text' => elgg_echo('roles_ui:set:role', array($role->getDisplayName())),
@@ -56,4 +56,36 @@ function user_hover_menu_setup($hook, $type, $menu, $params) {
 	));
 
 	return $menu;
+}
+
+/**
+ * Setup role entity menu
+ * 
+ * @param string          $hook   "register"
+ * @param string          $type   "menu:entity"
+ * @param \ElggMenuItem[] $return Menu
+ * @param array           $params Hook params
+ * @return \ElggMenuItem[]
+ */
+function entity_menu_setup($hook, $type, $return, $params) {
+
+	$entity = elgg_extract('entity', $params);
+
+	if (!$entity instanceof \ElggRole) {
+		return;
+	}
+
+	$return = array();
+
+	if (!$entity->isReservedRole() && $entity->canDelete()) {
+		$return[] = \ElggMenuItem::factory(array(
+					'name' => 'delete',
+					'text' => elgg_view_icon('delete'),
+					'href' => "action/roles/delete?guid=$entity->guid",
+					'confirm' => true,
+					'is_action' => true,
+		));
+	}
+
+	return $return;
 }
