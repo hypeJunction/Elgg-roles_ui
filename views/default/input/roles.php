@@ -12,7 +12,7 @@ if (empty($all_roles)) {
 
 $user_role = roles_get_role($user);
 if (in_array($user_role, $all_roles)) {
-	$roles_options[$role->name] = elgg_view_icon('drag-arrow') . $user_role->getDisplayName();
+	$roles_options[$role->name] = elgg_view_icon('cursor-drag-arrow') . $user_role->getDisplayName();
 }
 $extends = array_reverse((array) $user_role->getExtends());
 
@@ -21,7 +21,7 @@ foreach ($extends as $role_name) {
 	if (!$role) {
 		continue;
 	}
-	$roles_options[$role->name] = elgg_view_icon('drag-arrow') . $role->getDisplayName();
+	$roles_options[$role->name] = elgg_view_icon('cursor-drag-arrow') . $role->getDisplayName();
 }
 
 $value = [];
@@ -32,7 +32,7 @@ foreach ($all_roles as $role) {
 	if (array_key_exists($role->name, $roles_options)) {
 		continue;
 	}
-	$roles_options[$role->name] = elgg_view_icon('drag-arrow') . $role->getDisplayName();
+	$roles_options[$role->name] = elgg_view_icon('cursor-drag-arrow') . $role->getDisplayName();
 	
 }
 ?>
