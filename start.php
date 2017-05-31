@@ -11,18 +11,12 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2
  */
 
-namespace Elgg\Roles\UI;
+use hypeJunction\Roles\Ui\Menus;
+use hypeJunction\Roles\Ui\Router;
 
-require_once __DIR__ . "/lib/functions.php";
-require_once __DIR__ . "/lib/hooks.php";
-require_once __DIR__ . "/lib/events.php";
+require_once __DIR__ . '/autoloader.php';
 
-elgg_register_event_handler('init', 'system', __NAMESPACE__ . '\\init', 999);
-
-/**
- * Init plugin
- */
-function init() {
+elgg_register_event_handler('init', 'system', function() {
 
 	if (!elgg_is_admin_logged_in()) {
 		return;
@@ -41,32 +35,19 @@ function init() {
 	elgg_extend_view('css/elgg', 'roles/ui/set.css');
 	elgg_extend_view('css/admin', 'roles/ui/admin.css');
 
-	// Override roles config once roles specified by other plugins have been created
-	//elgg_register_plugin_hook_handler('roles:config', 'role', __NAMESPACE__ . '\\get_roles_config');
-
 	// Pretty URL for roles
-	elgg_register_entity_url_handler('object', 'role', __NAMESPACE__ . '\\url_handler');
+	elgg_register_plugin_hook_handler('entity:url', 'object', [Router::class, 'setURL']);
 
 	// Register admin menu items
-	elgg_register_event_handler('pagesetup', 'system', __NAMESPACE__ . '\\menu_setup');
+	elgg_register_plugin_hook_handler('register', 'menu:page', [Menus::class, 'setupPageMenu']);
 
 	// Allow admins to set the role from user hover menu
-	elgg_register_plugin_hook_handler('register', 'menu:user_hover', __NAMESPACE__ . '\\user_hover_menu_setup');
+	elgg_register_plugin_hook_handler('register', 'menu:user_hover', [Menus::class, 'setupUserHoverMenu']);
 
 	// Setup role menu
-	elgg_register_plugin_hook_handler('register', 'menu:entity', __NAMESPACE__ . '\\entity_menu_setup', 1000);
+	elgg_register_plugin_hook_handler('register', 'menu:entity', [Menus::class, 'setupEntityMenu'], 1000);
 
 	// Register an ajax view to pull up a roles form
 	elgg_register_ajax_view('roles/ajax/set');
 
-}
-
-/**
- * Pretty URL for roles
- * 
- * @param ElggRole $role
- * @return string
- */
-function url_handler($role) {
-	return elgg_normalize_url("admin/roles/permissions?role=$role->name");
-}
+});
